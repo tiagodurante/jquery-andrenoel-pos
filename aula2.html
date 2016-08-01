@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Validações</title>
+        <script src="jquery/jquery-3.0.0.min.js" charset="utf-8"></script>
+        <script src="jquery/jquery-ui.min.js" charset="utf-8"></script>
+        <script src="jquery/jquery.inputmask.bundle.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $('document').ready(function() {
+                $('#cpf').inputmask("999.999.999-99");
+                $('#rg').inputmask("9[9].999.999-9");
+                $('#dataNascimento').inputmask("99/99/9999");
+                $('#telefone').inputmask("(99) 9999[9]-9999");
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="cpf" value="" id="cpf" placeholder="cpf"><br>
+            <input type="text" name="rg" value="" id="rg" placeholder="rg"><br>
+            <input type="text" name="dataNascimento" value="" id="dataNascimento" placeholder="data de nascimento"><br>
+            <input type="text" name="telefone" value="" id="telefone" placeholder="telefone"><br>
+            <input type="submit" name="enviar" value="Salvar">
+        </form>
+    </body>
+</html>

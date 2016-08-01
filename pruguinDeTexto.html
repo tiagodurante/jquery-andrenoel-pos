@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pruguin loco 02</title>
+        <script src="jquery/jquery-3.0.0.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            (function($) {
+                $.fn.mudarLetras = function() {
+                    this.each(function(index) {
+                        var parag = $(this).html();
+                        parag = parag.replace(/e/ig, 'enter');
+                        parag = parag.replace(/i/ig, 'inis');
+                        parag = parag.replace(/o/ig, 'omber');
+                        parag = parag.replace(/u/ig, 'ufter');
+                        parag = parag.replace(/a/ig, 'ais');
+                        $(this).html(parag);
+                    });
+                    return this;
+                };
+            }(jQuery));
+
+            $('document').ready(function() {
+                $('#mudar').click(function() {
+                    $('p').mudarLetras();
+                    $(this).unbind().attr('disabled', 'true');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" name="name" value="Mudar" id="mudar">
+
+        <p>Aqui é Body Builder Ipsum PORRA! Ajuda o maluco que tá doente. Que não vai dá rapaiz, não vai dá essa porra. Aqui é bodybuilder porra! Aqui nóis constrói fibra, não é água com músculo. Eita porra!, tá saindo da jaula o monstro! Vamo monstro!</p>
+
+        <p>Boraaa, Hora do Show Porra. Vamo monstro! Que não vai dá rapaiz, não vai dá essa porra. Vo derrubar tudo essas árvore do parque ibirapuera. Bora caralho, você quer ver essa porra velho. É esse que a gente quer, é ele que nóis vamo buscar.</p>
+
+        <p>Birl! Sai filho da puta! É 37 anos caralho! É esse que a gente quer, é ele que nóis vamo buscar. Boraaa, Hora do Show Porra. Que não vai dá rapaiz, não vai dá essa porra.</p>
+
+        <p>Birl! Ajuda o maluco que tá doente. Aqui nóis constrói fibra, não é água com músculo. É esse que a gente quer, é ele que nóis vamo buscar. Que não vai dá rapaiz, não vai dá essa porra. Sabe o que é isso daí? Trapézio descendente é o nome disso aí.</p>
+
+        <p>Eita porra!, tá saindo da jaula o monstro! Negativa Bambam negativa. Eu quero esse 13 daqui a pouquinho aí. Aqui é bodybuilder porra! Ajuda o maluco que tá doente. Bora caralho, você quer ver essa porra velho.</p>
+
+        <p>AHHHHHHHHHHHHHHHHHHHHHH..., porra! Ó o homem ali porra!, é 13 porra! Vem porra! Bora caralho, você quer ver essa porra velho. É verão o ano todo vem cumpadi. Que não vai dá rapaiz, não vai dá essa porra.</p>
+
+        <p>Vem porra! É 37 anos caralho! Sai de casa comi pra caralho porra. Vai subir árvore é o caralho porra! É 13 porra! Birl!</p>
+    </body>
+</html>
